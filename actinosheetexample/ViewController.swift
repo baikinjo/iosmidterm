@@ -114,6 +114,81 @@ class ViewController: UIViewController {
         
         present(controller, animated: false, completion: nil)
     }
+    @IBAction func chooseButtonPressed(_ sender: AnyObject) {
+        let controller = UIAlertController(title: "You are lost in a forest", message: "The path ahead forks in two directions", preferredStyle: .alert)
+        
+        func leftHandler(actionTarget: UIAlertAction) {
+            var controller = UIAlertController()
+            
+            if (getRandomNumber(range: 2)%2 == 0){
+                controller = UIAlertController(title: "You stepped into a bear trap.", message: "You struggle but the hungry bear gets what the hungry bear wants.", preferredStyle: .alert)
+                
+                let giveup = UIAlertAction(title: "Bad ending...", style: .destructive, handler: nil)
+
+                controller.addAction(giveup)
+            } else {
+                controller = UIAlertController(title: "You turned left.", message: "The path ahead forks in two directions", preferredStyle: .alert)
+                
+                let left = UIAlertAction(title: "Go left", style: .default, handler: leftHandler)
+                let right = UIAlertAction(title: "Go right", style: .default, handler: rightHandler)
+                let giveup = UIAlertAction(title: "Give up", style: .destructive, handler: giveupHandler)
+                
+                controller.addAction(left)
+                controller.addAction(right)
+                controller.addAction(giveup)
+            }
+            
+            present(controller, animated: false, completion: nil)
+        }
+        
+        func rightHandler(actionTarget: UIAlertAction) {
+            var controller = UIAlertController()
+            
+            if (getRandomNumber(range: 2)%2 == 0){
+                controller = UIAlertController(title: "You ate a poisonous mushroom.", message: "You think you are now a tree and try your hardest to make everything oak-kay.", preferredStyle: .alert)
+                
+                let giveup = UIAlertAction(title: "Bad ending...", style: .destructive, handler: nil)
+                
+                controller.addAction(giveup)
+            } else {
+                controller = UIAlertController(title: "You turned right.", message: "The path ahead forks in two directions", preferredStyle: .alert)
+                
+                let left = UIAlertAction(title: "Go left", style: .default, handler: leftHandler)
+                let right = UIAlertAction(title: "Go right", style: .default, handler: rightHandler)
+                let giveup = UIAlertAction(title: "Give up", style: .destructive, handler: giveupHandler)
+                
+                controller.addAction(left)
+                controller.addAction(right)
+                controller.addAction(giveup)
+            }
+            
+            present(controller, animated: false, completion: nil)
+        }
+        
+        func giveupHandler(actionTarget: UIAlertAction) {
+            let controller = UIAlertController(title: "You gave up trying to leave the forest.", message: "You build a house. You were lost but now you live here. You have severely improved your predicament.", preferredStyle: .alert)
+            
+            let end = UIAlertAction(title: "The End", style: .cancel, handler: nil)
+            
+            controller.addAction(end)
+            
+            present(controller, animated: false, completion: nil)
+        }
+        
+        let left = UIAlertAction(title: "Go left", style: .default, handler: leftHandler)
+        let right = UIAlertAction(title: "Go right", style: .default, handler: rightHandler)
+        let giveup = UIAlertAction(title: "Give up", style: .destructive, handler: giveupHandler)
+        
+        controller.addAction(left)
+        controller.addAction(right)
+        controller.addAction(giveup)
+        
+        present(controller, animated: false, completion: nil)
+    }
+    
+    func getRandomNumber(range: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(range)))+1
+    }
     
     
 }

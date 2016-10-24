@@ -56,6 +56,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzi-68-agi">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Choose your own adventure"/>
+                                <connections>
+                                    <action selector="chooseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IwF-vH-FPQ"/>
+                                    <action selector="desButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czz-Gu-fY7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -67,10 +75,12 @@
                             <constraint firstItem="lV0-yl-Nbz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HjY-fy-O0I"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YDV-hv-bGR" secondAttribute="bottom" constant="308" id="K6V-c3-F4A"/>
                             <constraint firstItem="mZE-EN-O76" firstAttribute="top" secondItem="98p-aO-dVK" secondAttribute="bottom" constant="8" symbolic="YES" id="PC5-S6-PT3"/>
+                            <constraint firstItem="Bzi-68-agi" firstAttribute="top" secondItem="EcU-u7-Ymd" secondAttribute="bottom" constant="8" symbolic="YES" id="gSA-C3-JKx"/>
                             <constraint firstItem="98p-aO-dVK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jBc-Mc-AFv"/>
                             <constraint firstItem="EcU-u7-Ymd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJR-sW-emu"/>
                             <constraint firstItem="YDV-hv-bGR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pam-wk-rM9"/>
                             <constraint firstItem="mZE-EN-O76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uSP-R6-1zT"/>
+                            <constraint firstItem="Bzi-68-agi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zfg-Nk-eFG"/>
                         </constraints>
                     </view>
                 </viewController>
