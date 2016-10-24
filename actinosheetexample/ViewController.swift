@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBAction func changeAction(_ sender: AnyObject) {
         let actionSheet : UIAlertController = UIAlertController(title: "CHANGE Background?", message: "CHOOSE", preferredStyle: UIAlertControllerStyle.actionSheet)
         
+        actionSheet.addAction(UIAlertAction(title:"DONT CARE DELETE THIS APP", style: UIAlertActionStyle.destructive, handler: nil))
         actionSheet.addAction(UIAlertAction(title:"Red", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.red}))
         actionSheet.addAction(UIAlertAction(title:"BLUE", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.blue}))
         actionSheet.addAction(UIAlertAction(title:"green", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.green}))
