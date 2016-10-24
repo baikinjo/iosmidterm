@@ -18,20 +18,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZE-EN-O76">
-                                <frame key="frameInset" minX="166" minY="318" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log in"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZE-EN-O76">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Link Accounts"/>
                                 <connections>
                                     <action selector="shareActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5h-Hu-zQC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDV-hv-bGR">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Default"/>
+                                <connections>
+                                    <action selector="defaultButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3L-vX-ecg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcU-u7-Ymd">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Destructive"/>
+                                <connections>
+                                    <action selector="desButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ft3-zr-Wwv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-yl-Nbz">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="With Input"/>
+                                <connections>
+                                    <action selector="inputButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3p-K7-YwP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action sheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98p-aO-dVK">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV1-jh-EM9">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YDV-hv-bGR" firstAttribute="top" secondItem="EcU-u7-Ymd" secondAttribute="bottom" constant="-137" id="0Io-HN-mQt"/>
+                            <constraint firstItem="lV0-yl-Nbz" firstAttribute="top" secondItem="aV1-jh-EM9" secondAttribute="bottom" constant="53" id="8TH-Up-VaN"/>
+                            <constraint firstItem="EcU-u7-Ymd" firstAttribute="top" secondItem="aV1-jh-EM9" secondAttribute="bottom" constant="99" id="8dA-cU-cy6"/>
+                            <constraint firstItem="aV1-jh-EM9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F6R-hs-RFb"/>
+                            <constraint firstItem="98p-aO-dVK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="GDN-Kl-ZHF"/>
+                            <constraint firstItem="lV0-yl-Nbz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HjY-fy-O0I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YDV-hv-bGR" secondAttribute="bottom" constant="308" id="K6V-c3-F4A"/>
+                            <constraint firstItem="mZE-EN-O76" firstAttribute="top" secondItem="98p-aO-dVK" secondAttribute="bottom" constant="8" symbolic="YES" id="PC5-S6-PT3"/>
+                            <constraint firstItem="98p-aO-dVK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jBc-Mc-AFv"/>
+                            <constraint firstItem="EcU-u7-Ymd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJR-sW-emu"/>
+                            <constraint firstItem="YDV-hv-bGR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pam-wk-rM9"/>
+                            <constraint firstItem="mZE-EN-O76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uSP-R6-1zT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="-4"/>
         </scene>
     </scenes>
 </document>
