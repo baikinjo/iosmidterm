@@ -19,6 +19,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func changeAction(_ sender: AnyObject) {
+        let actionSheet : UIAlertController = UIAlertController(title: "CHANGE Background?", message: "CHOOSE", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title:"Red", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.red}))
+        actionSheet.addAction(UIAlertAction(title:"BLUE", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.blue}))
+        actionSheet.addAction(UIAlertAction(title:"green", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.green}))
+        actionSheet.addAction(UIAlertAction(title:"nah i like default", style: UIAlertActionStyle.default, handler:{ action in self.view.backgroundColor = UIColor.white}))
+        actionSheet.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        present(actionSheet, animated: true, completion:nil)
+        
+    }
+    
 
     @IBAction func shareActionSheet(_ sender: AnyObject) {
         let actionSheet : UIAlertController = UIAlertController(title: "Log In", message: "How do you want to Log in?", preferredStyle: UIAlertControllerStyle.actionSheet)
